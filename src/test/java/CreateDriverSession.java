@@ -3,7 +3,6 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 
 public class CreateDriverSession {
@@ -29,10 +28,11 @@ public class CreateDriverSession {
                 return new AndroidDriver(url, caps);
 
             case "iOS":
-                caps.setCapability("deviceName", "iPhone 15");
+                caps.setCapability("deviceName", "iPhone 15 Pro");
                 caps.setCapability("automationName", "XCUITest");
-                caps.setCapability("udid", "A947527B-A8FA-4882-A24E-E9F0390D43DD");
-                //  caps.setCapability("app","/Users/erodriguez/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
+                caps.setCapability("udid", "40A84BB1-DECA-4601-BDCB-1CEA17AEF49F");
+                caps.setCapability("app",
+                        "/Users/erodriguez/Downloads/ios-uicatalog-master/UIKitCatalog/build/Release-iphonesimulator/UIKitCatalog-iphonesimulator.app");
                 caps.setCapability("simulatorStartupTimeout", 180000);
                 caps.setCapability("bundleId", "com.example.apple-samplecode.UICatalog");
                 // caps.setCapability("xcodeOrgId", "F44N5MSDA3");
@@ -44,3 +44,4 @@ public class CreateDriverSession {
         }
     }
 }
+    
